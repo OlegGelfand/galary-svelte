@@ -25,6 +25,7 @@
     "@tsconfig/svelte": "^1.0.0"
   },
   "dependencies": {
+    "prettier": "^2.2.1",
     "sirv-cli": "^1.0.0"
   }
 }
