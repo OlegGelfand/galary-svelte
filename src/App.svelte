@@ -1,15 +1,15 @@
 <script>
 
-    let nextPhoto = 1
+    let iPhoto = 1
 
     function toggleNext() {
-        nextPhoto++;
-        if (nextPhoto > 5) nextPhoto = 5;
+        iPhoto++;
+        if (iPhoto > 5) iPhoto = 5;
     }
 
     function togglePrev() {
-        nextPhoto--
-        if (nextPhoto < 1) nextPhoto = 1;
+        iPhoto--
+        if (iPhoto < 1) iPhoto = 1;
     }
 </script>
 <style>
@@ -44,7 +44,8 @@
 
     .container {
         /*position: relative;*/
-        /*margin: auto;*/
+        margin:0;
+        padding:0;
         text-align: center;
 
     }
@@ -68,27 +69,27 @@
 
     }
 
-    img {
+    .photos img {
         height:100%;
         width:calc(100%/5);
         margin: 0;
         padding: 0;
     }
     .activate-photo1{
-        left:0;
-    }
-    .activate-photo2 {
         left:-100%;
     }
-    .activate-photo3 {
+    .activate-photo2 {
         left:-200%;
+    }
+    .activate-photo3 {
+        left:-300%;
         /*left:300%;*/
     }
     .activate-photo4 {
-        left:-300%;
+        left:-400%;
     }
     .activate-photo5 {
-        left:-400%;
+        left:-500%;
     }
     .button {
         /*display:inline-block;*/
@@ -123,7 +124,7 @@
     <div class="container">
         <h1>welcome to the future</h1>
         <div class="photostrip">
-            <ul class="photos activate-photo{nextPhoto}">
+            <ul class="photos activate-photo{iPhoto}">
                 <img alt="2"  class="active1"
                      src="https://images.unsplash.com/photo-1550103560-199ddb5aded5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aXNyYWVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
                 <img alt="1"  class="active2"
@@ -138,7 +139,7 @@
         </div>
         <div class="button-class">
             <button on:click={toggleNext} class="button">next</button>
-            <button class="button">{nextPhoto}/5</button>
+            <button class="button">{iPhoto}/5</button>
             <button on:click={togglePrev} class="button">prev</button>
         </div>
     </div>
