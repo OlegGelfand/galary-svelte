@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <title>Svelte app</title>
+    <style type="text/css">
+        .container{
+            display: flex;
+            text-align: center;
+            width: 90vw;
+            height: 50vh;
+            border:8px #000000 solid;
+            flex-direction: column;
+        }
+        .row1 {
+            display:flex;
+            background-color: red;
+            border:2px solid black;
+            justify-content: space-evenly;
+        }
+        .row2 {
+            display: flex;
+            align-content: center;
+            background-color:blue;
+            flex-grow: 2;
+            border:2px solid black;
+        }
+        .row3{
+            display: flex;
+            background-color: green;
+            flex-grow: 2;
+            border: 2px solid black;
+        }
+        .row4{
+            display: flex;
+            background-color: green;
+            align-self: center;
+            flex-grow: 1;
+            border:2px solid black;
+        }
+        .row5{
+            display: flex;
+            background-color: green;
+            flex-grow: 2;
+            border:2px solid black;
+        }
+        /*}*/
+        .child1-row1{
+            background-color: yellow;
+            flex-grow: 1;
+
+        }
+        .child2-row1{
+            background-color: yellow;
+            flex-grow: 1;
+        }
+        .child3-row1{
+            background-color: yellow;
+            flex-grow: 1;
+        }
+        .child1-row2{
+            background-color: yellow;
+            flex-grow: 1;
+            align-self:flex-end;
+        }
+        .child2-row2{
+            background-color: yellow;
+            flex-grow: 3;
+            align-self:flex-end;
+        }
+        /*ROW3 and ROW5*/
+        .child1-row3{
+            width: 100px;}
+        .child2-row3{
+            width: 100px;}
+        .child3-row3{
+            border:2px solid white;
+            width:100%;
+        }
+        .child4-row3{
+            width: 100px;}
+        .child5-row3{
+            width: 100px;}
+        /*ROW4*/
+        .child1-row4{
+            text-align: center;
+            font-size: 14px;
+           width:40vw;
+            border:2px solid blue;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row row1">
+        <div class="row child1-row1">child1-row1</div>
+        <div class="row child2-row1">child2-row1</div>
+        <div class="row child3-row1">child3-row1</div>
+    </div>
+    <div class="row row2">
+        <div class="row child1-row2"></div>
+        <div class="row child2-row2">child2-row2</div>
+    </div>
+    <div class="row row3">
+        <div class="row child1-row3">child1-row3</div>
+        <div class="row child2-row3">child2-row3</div>
+        <div class="row child3-row3">child3-row3</div>
+        <div class="row child4-row3">child4-row3</div>
+        <div class="row child5-row3">child5-row3</div>
+    </div>
+    <div class="row row4">
+        <div class="row child1-row4">HELLO</div>
+    </div>
+    <div class="row row5">
+        <div class="row child1-row3">child1-row3</div>
+        <div class="row child2-row3">child2-row3</div>
+        <div class="row child3-row3">child3-row3</div>
+        <div class="row child4-row3">child4-row3</div>
+        <div class="row child5-row3">child5-row3</div>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

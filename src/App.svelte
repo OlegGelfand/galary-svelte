@@ -114,9 +114,10 @@
         text-transform: uppercase;
     }
 
+     @media (orientation: portrait) and (max-width: 400px) {
+         }
 
-
-
+π
 
 
 </style>
